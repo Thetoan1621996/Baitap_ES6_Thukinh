@@ -99,9 +99,8 @@ let dataGlasses = [
 let loadGlasses = () => {
   let showKinh = "";
   for (let data of dataGlasses) {
-    let value = data.src;
-    let position = data.id;
-    showKinh += `<div class = "col-4" onclick = "tryOn('${position}')"><img src ="${value}" width = "100%"></div>`;
+    let {src,id} = data
+    showKinh += `<div class = "col-4" onclick = "tryOn('${id}')"><img src ="${src}" width = "100%"></div>`;
   }
   document.querySelector("#vglassesList").innerHTML = showKinh;
 };
